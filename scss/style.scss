@@ -1,0 +1,318 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+.header {
+  background-image: url("../images/header/bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(31, 32, 33, 0.79);
+  background-blend-mode: darken;
+  padding: 26px 0 66px;
+  &__title {
+    @extend %Montserrat-Bold-700;
+    font-size: 38px;
+    line-height: 46px;
+    color: #ffffff;
+  }
+  &__btn {
+    display: none;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  &__list {
+    display: flex;
+  }
+  &__list-item + .nav__list-item {
+    margin-left: 49px;
+  }
+  &__list-link {
+    @extend %Montserrat-Regular-400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contact-span {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: #ffffff;
+  }
+}
+.hav__contact-link {
+  @extend %Montserrat-Bold-700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  padding-bottom: 3px;
+}
+.content {
+  padding: 37px 0 83px;
+  &__filter {
+    display: flex;
+    margin-bottom: 38px;
+  }
+  &__filter-title {
+    @extend %Montserrat-Bold-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
+  &__filter-select {
+    @extend %Montserrat-Regular-400;
+    margin-left: 50px;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    border: none;
+    outline: none;
+    background-color: #fff;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 23px;
+    margin-bottom: 68px;
+  }
+  &__item {
+    width: 380px;
+  }
+  &__item-img {
+    position: relative;
+  }
+  &__item-link {
+    position: absolute;
+    top: 34px;
+    right: 32px;
+    transition: all 0.6s;
+  }
+  &__item-link:hover {
+    //opacity: 0.5;
+    //background-image: url('../images/content/heartHover.png');
+    path {
+      fill: #fff;
+    }
+  }
+  &__sale {
+    width: 78px;
+    background: #e62d2d;
+    border-radius: 10px;
+    padding: 9px 19px 10px 18px;
+    @extend %Montserrat-Regular-400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    position: absolute;
+    top: 34px;
+    left: 38px;
+  }
+  &__info {
+    background: #f3f3f3;
+    padding: 29px 33px 29px 29px;
+  }
+  &__info-title {
+    @extend %Montserrat-Bold-700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 22px;
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 18px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  &__description::before {
+    position: absolute;
+    content: url("");
+    height: 26px;
+    width: 4px;
+    background: #6ebbd3;
+    left: 0px;
+  }
+  &__description-span {
+    max-width: 89px;
+    @extend %Montserrat-Regular-400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    margin-right: 20px;
+  }
+  &__description-num {
+    @extend %Montserrat-Bold-700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+  &__description-text {
+    @extend %Montserrat-Regular-400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+  }
+  &__description-number {
+    @extend %Montserrat-Bold-700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+  &__btn {
+    width: 100%;
+    padding: 21px 56px 22px 55px;
+    background: #6ebbd3;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  &__more {
+    width: 380px;
+    display: block;
+    margin: 0 auto;
+    @extend %Montserrat-Regular-400;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    padding: 24px 128px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+  &__to-up {
+    position: fixed;
+    right: 404px;
+    display: none;
+    bottom: 475px;
+    width: 59px;
+    height: 59px;
+    background: #6ebbd3;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.all {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    background: #1f2021;
+    padding: 83px 80px 92px 79px;
+  }
+  &__title {
+    @extend %Montserrat-Bold-700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #ffffff;
+    margin-bottom: 26px;
+  }
+  &__subtitle {
+    max-width: 298px;
+    @extend %Montserrat-Regular-400;
+    font-size: 28px;
+    line-height: 91.2%;
+    color: #ffffff;
+  }
+  &__form-input {
+    margin-bottom: 24px;
+  }
+  &__form-email {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 22px 33px 26px;
+    border: none;
+  }
+  &__form-email::placeholder {
+    @extend %Montserrat-Regular-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+  &__form-btn {
+    @extend %Montserrat-Bold-700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    border: none;
+    padding: 22px 75px 26px;
+    background: #6ebbd3;
+    border-radius: 10px;
+    margin-left: 16px;
+    cursor: pointer;
+    //transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+  }
+  &__checkbox-text {
+    @extend %Montserrat-Regular-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    margin-left: 22px;
+  }
+  &__checkbox-square {
+    display: none;
+    //width: 18px;
+    //height: 18px;
+    //background: #6ebbd3;
+    //border-radius: 3px;
+  }
+  &__span {
+    width: 18px;
+    height: 18px;
+    background: #6ebbd3;
+    border-radius: 3px;
+    border: none;
+    position: relative;
+  }
+  &__span::before {
+    position: absolute;
+    content: url("../images/check-mark 1.svg");
+    display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //width: 10px;
+    //height: 10px;
+    //background-color: #e62d2d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.6s;
+  }
+  &__checkbox-square:checked + .all__span::before {
+    opacity: 1;
+  }
+  &__form-input {
+    position: relative;
+  }
+  &__error {
+    position: absolute;
+    @extend %Montserrat-Bold-700;
+    color: #fff;
+    font-size: 26px;
+  }
+}
+.footer {
+  height: 114px;
+}
+@import "media";

@@ -1,0 +1,133 @@
+@media screen and (max-width: 1440px) {
+  .content {
+    &__to-up {
+      right: 130px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background-position: unset;
+  }
+  .logo {
+    margin-left: -35px;
+  }
+  .nav {
+    align-items: end;
+  }
+  .content {
+    &__item {
+      width: 355px;
+    }
+    &__to-up {
+      right: 16px;
+    }
+    &__sale {
+      top: 25px;
+      left: 20px;
+    }
+    &__item-link {
+      top: 25px;
+    }
+  }
+  .all {
+    &__form-email {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    &__form-btn {
+      display: block;
+      margin-left: 0;
+      margin: 0 auto 24px;
+    }
+    &__title {
+      font-size: 60px;
+    }
+    &__error {
+      bottom: -137px;
+      right: 0px;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    background-position: top;
+    &__title {
+      font-size: 28px;
+    }
+    &__btn {
+      display: block;
+      margin-left: -38px;
+      border: none;
+      z-index: 9999;
+    }
+  }
+  .logo {
+    display: none;
+  }
+  .nav {
+    &__list {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      background-color: crimson;
+      transform: translateX(-100%);
+      transition: all 0.6s;
+    }
+    &__list--active {
+      transform: translateX(0%);
+    }
+    &__list-item + .nav__list-item {
+      margin-left: 0px;
+    }
+    &__list-item {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  .content {
+    &__filter{
+      flex-direction: column;
+    }
+    &__filter-title{
+      margin-bottom: 10px;
+    }
+    &__more {
+      width: 100%;
+      text-align: center;
+      padding: 24px 110px;
+    }
+    &__sale {
+      top: 20px;
+      left: 20px;
+    }
+    &__item-link {
+      top: 20px;
+      right: 20px;
+    }
+    &__filter-select{
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .all {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 25px 55px 25px;
+    }
+    &__title {
+      font-size: 50px;
+    }
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+  }
+  .footer {
+    height: 10px;
+  }
+}
